@@ -333,16 +333,16 @@ body {
 /* ── Cloud-style "get started" layout (matches Crusoe Cloud Managed Logs spacing) ── */
 .content-inner.wide { max-width: 1200px; }
 
-.cloud-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.cloud-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
 .cloud-page-title {
   font-family: var(--font-heading); font-size: 26px; font-weight: 400;
   letter-spacing: -0.04em; color: var(--text);
 }
 
-.cloud-hero { display: flex; align-items: center; gap: 48px; margin-bottom: 68px; }
+.cloud-hero { display: flex; align-items: center; gap: 40px; margin-bottom: 48px; }
 .cloud-illus {
-  width: 252px; height: 212px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center; color: var(--text);
+  width: 200px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: flex-start; color: var(--text);
 }
 .cloud-illus-svg { width: 200px; height: 172px; display: block; }
 
@@ -405,8 +405,8 @@ body {
 /* Simple (no-card) states: enlarge and vertically center */
 .content-center { display: flex; flex-direction: column; }
 .content-center .content-inner { margin-top: auto; margin-bottom: auto; }
-/* Gentle downward nudge (not full centering) for the model-card pages */
-.content-nudge .content-inner { padding-top: 84px; }
+/* Keep the page title pinned top-left; nudge only the hero/cards down a little */
+.content-nudge .cloud-hero { margin-top: 56px; }
 
 .hero {
   display: flex; flex-direction: column; align-items: center; text-align: center;
