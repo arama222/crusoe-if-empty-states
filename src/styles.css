@@ -331,9 +331,9 @@ body {
 }
 
 /* ── Cloud-style "get started" layout (matches Crusoe Cloud Managed Logs spacing) ── */
-.content-inner.wide { max-width: 1200px; }
+.content-inner.wide { max-width: 1600px; }
 
-.cloud-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
+.cloud-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 88px; }
 .cloud-page-title {
   font-family: var(--font-heading); font-size: 26px; font-weight: 400;
   letter-spacing: -0.04em; color: var(--text);
@@ -442,7 +442,7 @@ body {
 .hero-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; justify-content: center; }
 
 /* Model chips row */
-.models-section { margin-top: 12px; }
+.models-section { margin-top: 44px; }
 .models-head {
   display: flex; align-items: center; justify-content: space-between;
   margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border);

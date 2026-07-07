@@ -248,7 +248,7 @@ function GraphIllus() {
 /* ---------- WITH cards: left-hero layout (illustration left, text right, cards below) ---------- */
 function LeftHeroPage({ page }) {
   return (
-    <div className={'content' + (page.fullSteps ? '' : ' content-nudge')}>
+    <div className="content">
       <div className="content-inner wide">
         {page.pageTitle && (
           <div className="cloud-head">
