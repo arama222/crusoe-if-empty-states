@@ -211,13 +211,13 @@ function StepAction({ action }) {
       return (
         <div>
           <div className="gs-model">
-            <div className="gs-model-icon">{action.brand?.charAt(0) || 'M'}</div>
+            <div className="gs-model-icon">{LOGOS[action.brand] || action.brand?.charAt(0) || 'M'}</div>
             <div className="gs-model-info">
               <div className="gs-model-brand">{action.brand}</div>
               <div className="gs-model-name">{action.name}</div>
               <div className="gs-model-meta">{action.meta}</div>
-              {action.price && <div className="gs-model-price">{action.price}</div>}
             </div>
+            {action.price && <div className="gs-model-price">{action.price}</div>}
             <span className="gs-model-chev"><IconChevron size={18} /></span>
           </div>
           {action.note && <div className="gs-note">{action.note}</div>}
@@ -250,11 +250,6 @@ function LeftHeroPage({ page }) {
   return (
     <div className="content">
       <div className="content-inner wide">
-        {page.pageTitle && (
-          <div className="cloud-head">
-            <h1 className="cloud-page-title">{page.pageTitle}</h1>
-          </div>
-        )}
         <div className="cloud-hero">
           <div className="cloud-illus"><CubeIllus /></div>
           <div className="cloud-hero-txt">
