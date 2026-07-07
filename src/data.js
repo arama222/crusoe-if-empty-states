@@ -131,10 +131,10 @@ export const BADGE_ICONS = {
 
 // Popular / catalog models shown as chips (from the real IF console).
 const CATALOG = [
-  { brand: 'Qwen', name: 'Qwen3 30B A3B', tags: ['Text To Text', 'Tunable'], desc: 'Efficient mixture-of-experts model — strong reasoning at low compute. Great for high-volume, cost-sensitive workloads.' },
-  { brand: 'Meta', name: 'Llama 3.3 70B Instruct', tags: ['Text To Text', 'Tunable'], desc: 'Meta’s flagship open model — excellent instruction-following for production chat, RAG, and agents.' },
-  { brand: 'OpenAI', name: 'gpt-oss-120b', tags: ['Text To Text', 'Tunable'], desc: 'OpenAI’s open-weight model — a capable general-purpose default with strong tool-use and long context.' },
-  { brand: 'DeepSeek', name: 'R1 0528', tags: ['Text To Text', 'Tunable'], desc: 'Reasoning-optimized with transparent chain-of-thought — ideal for math, code, and multi-step problems.' },
+  { brand: 'Qwen', name: 'Qwen3 30B A3B', tags: ['Text To Text', 'Tunable'], desc: 'Efficient mixture-of-experts model, strong reasoning at low compute. Great for high-volume, cost-sensitive workloads.' },
+  { brand: 'Meta', name: 'Llama 3.3 70B Instruct', tags: ['Text To Text', 'Tunable'], desc: 'Meta’s flagship open model, excellent instruction-following for production chat, RAG, and agents.' },
+  { brand: 'OpenAI', name: 'gpt-oss-120b', tags: ['Text To Text', 'Tunable'], desc: 'OpenAI’s open-weight model, a capable general-purpose default with strong tool-use and long context.' },
+  { brand: 'DeepSeek', name: 'R1 0528', tags: ['Text To Text', 'Tunable'], desc: 'Reasoning-optimized with transparent chain-of-thought, ideal for math, code, and multi-step problems.' },
 ]
 
 export const PAGES = {
@@ -143,18 +143,18 @@ export const PAGES = {
     surface: 'Serverless Inference', layout: 'cards',
     pageTitle: 'Serverless Inference',
     title: 'Run your first model',
-    desc: 'Call leading open models over an OpenAI-compatible API — no GPUs to manage, billed per token and accelerated by MemoryAlloy.',
+    desc: 'Call leading open models over an OpenAI-compatible API, no GPUs to manage, billed per token and accelerated by MemoryAlloy.',
     primary: { label: 'Open playground' },
     docs: DOCS,
     fullSteps: [
-      { title: 'Create an API key', desc: 'Your key is shown only once — save it somewhere safe.',
+      { title: 'Create an API key', desc: 'Your key is shown only once, save it somewhere safe.',
         action: { type: 'button', label: 'Get API key', variant: 'outline', icon: 'key' } },
-      { title: 'Choose a model', desc: 'Select a model — the code example updates automatically.',
+      { title: 'Choose a model', desc: 'Select a model and the code example updates automatically.',
         action: { type: 'model', brand: 'Meta', name: 'Llama 3.3 70B Instruct', meta: 'LLM · 131k context',
           price: '$0.25 Input · $0.13 Cached · $0.75 Output',
           note: 'Try the selected model in the Playground, or explore all available models including NVIDIA Nemotron, Gemma, GPT-OSS and more.',
           buttons: [{ label: 'Try Model', variant: 'outline' }, { label: 'Explore Model Catalog', variant: 'outline' }] } },
-      { title: 'Make your first inference call', desc: 'OpenAI-compatible — swap the base URL, add your key, done.',
+      { title: 'Make your first inference call', desc: 'OpenAI-compatible, swap the base URL, add your key, done.',
         action: { type: 'code', ...LLAMA_CODE } },
     ],
   },
@@ -164,7 +164,7 @@ export const PAGES = {
     pageTitle: 'Self-Serve Deployments',
     title: 'Deploy an on-demand endpoint',
     desc: [
-      'Spin up on-demand endpoints in minutes — pay only while they run, scale to zero when idle and tear them down when you’re done. Browse the ',
+      'Spin up on-demand endpoints in minutes, pay only while they run, scale to zero when idle and tear them down when you’re done. Browse the ',
       { text: 'Model Library', href: DOCS },
       ' to get started.',
     ],
@@ -194,7 +194,7 @@ export const PAGES = {
   evaluations: {
     surface: 'Evaluations', layout: 'centered', icon: 'eval',
     title: 'Evaluations',
-    desc: 'Measure and compare model quality with the built-in eval harness — catch regressions before you ship a change to production.',
+    desc: 'Measure and compare model quality with the built-in eval harness to catch regressions before you ship a change to production.',
     primary: { label: 'New evaluation' }, docs: DOCS,
   },
 
@@ -216,7 +216,7 @@ export const PAGES = {
   usage: {
     surface: 'Usage', layout: 'centered', icon: 'usage',
     title: 'Usage',
-    desc: 'Token volume, request counts, and spend appear here in real time — broken down by model and API key — once you make your first request.',
+    desc: 'Token volume, request counts, and spend appear here in real time, broken down by model and API key, once you make your first request.',
     primary: { label: 'Open playground' }, docs: DOCS,
   },
 
@@ -230,7 +230,7 @@ export const PAGES = {
   metrics: {
     surface: 'Metrics', layout: 'centered', icon: 'metrics',
     title: 'Metrics',
-    desc: 'Time-to-first-token, throughput, and error rates — accelerated by MemoryAlloy — appear here as soon as traffic flows.',
+    desc: 'Time-to-first-token, throughput, and error rates, accelerated by MemoryAlloy, appear here as soon as traffic flows.',
     primary: { label: 'Open playground' }, docs: DOCS,
   },
 

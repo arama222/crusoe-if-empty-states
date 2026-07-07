@@ -246,9 +246,9 @@ function GraphIllus() {
 }
 
 /* ---------- WITH cards: left-hero layout (illustration left, text right, cards below) ---------- */
-function LeftHeroPage({ page }) {
+function LeftHeroPage({ page, screen }) {
   return (
-    <div className="content">
+    <div className={'content page-' + screen}>
       <div className="content-inner wide">
         <div className="cloud-hero">
           <div className="cloud-illus"><CubeIllus /></div>
@@ -316,12 +316,7 @@ function LeftHeroPage({ page }) {
 /* ---------- NO cards: simple centered state (illustration + headline + description + CTA) ---------- */
 function CenteredPage({ page }) {
   return (
-    <div className="content content-center">
-      {page.tabs && (
-        <div className="page-tabs">
-          {page.tabs.map((t, i) => <span key={t} className={'page-tab' + (i === 0 ? ' active' : '')}>{t}</span>)}
-        </div>
-      )}
+    <div className="content">
       <div className="content-inner">
         <div className="hero">
           <div className="hero-illus"><CubeIllus /></div>
@@ -340,7 +335,7 @@ function EmptyState() {
   const { screen } = useParams()
   const page = PAGES[screen]
   if (!page) return <Navigate to="/app/serverless" replace />
-  return page.layout === 'cards' ? <LeftHeroPage page={page} /> : <CenteredPage page={page} />
+  return page.layout === 'cards' ? <LeftHeroPage page={page} screen={screen} /> : <CenteredPage page={page} />
 }
 
 export default function App() {
