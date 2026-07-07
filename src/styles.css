@@ -498,9 +498,8 @@ body {
 .gs-hero-sub { font-size: 13px; color: var(--muted); margin-top: 3px; line-height: 145%; }
 
 .gs-steps { background: var(--panel); border-radius: 14px; overflow: hidden; }
-/* Push the below-hero section down ~10% on Serverless + Serverless Fine-Tuning only */
-.page-serverless .gs-steps { margin-top: 128px; }
-.page-fine-tuning .models-section { margin-top: 180px; }
+/* Push the below-hero section down ~10% on Serverless only */
+.page-serverless .gs-steps { margin-top: 80px; }
 .gs-step { display: flex; gap: 16px; padding: 24px 26px; }
 .gs-step + .gs-step { border-top: 1px solid var(--border); }
 .gs-step-num {
