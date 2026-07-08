@@ -163,11 +163,7 @@ export const PAGES = {
     surface: 'Self-Serve Deployments', layout: 'cards',
     pageTitle: 'Self-Serve Deployments',
     title: 'Deploy an on-demand endpoint',
-    desc: [
-      'Spin up on-demand endpoints in minutes, pay only while they run, scale to zero when idle and tear them down when you’re done. Browse the ',
-      { text: 'Model Library', href: DOCS },
-      ' to get started.',
-    ],
+    desc: 'Spin up on-demand endpoints in minutes. Pay only while they run and scale to zero when idle.',
     primary: { label: 'Create Deployment' },
     docs: DOCS,
     models: { title: 'Popular models to self-serve deploy', viewAll: true, action: 'Deploy', items: CATALOG.slice(0, 3) },
