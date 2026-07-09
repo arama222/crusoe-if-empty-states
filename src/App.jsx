@@ -207,6 +207,16 @@ function StepAction({ action }) {
       return <div className="gs-btn-row">{action.items.map((b, i) => <Button key={i} {...b} />)}</div>
     case 'cli':
       return <pre className="card-cli"><code>{action.cmd}</code></pre>
+    case 'select':
+      return (
+        <div>
+          <div className="gs-select">
+            <span className="gs-select-placeholder">{action.placeholder}</span>
+            <span className="gs-model-chev"><IconChevron size={18} /></span>
+          </div>
+          {action.buttons && <div className="gs-btn-row">{action.buttons.map((b, i) => <Button key={i} {...b} />)}</div>}
+        </div>
+      )
     case 'model':
       return (
         <div>
@@ -282,6 +292,15 @@ function LeftHeroPage({ page, screen }) {
           </>
         )}
 
+        {page.stepsBanner && (
+          <div className="gs-hero">
+            <div className="gs-hero-icon"><IconServerless size={24} /></div>
+            <div>
+              <div className="gs-hero-title">{page.stepsBanner.title}</div>
+              <div className="gs-hero-sub">{page.stepsBanner.sub}</div>
+            </div>
+          </div>
+        )}
         {page.fullSteps && (
           <div className="gs-steps">
             {page.fullSteps.map((step, i) => (

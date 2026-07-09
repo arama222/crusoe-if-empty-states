@@ -88,19 +88,6 @@ completion = client.chat.completions.create(
 print(completion.choices[0].message.content)`,
     },
     {
-      lang: 'cURL',
-      code: `curl https://api.inference.crusoecloud.com/v1/chat/completions \\
-  -H "Authorization: Bearer $CRUSOE_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{
-    "model": "meta-llama/Llama-3.3-70B-Instruct",
-    "messages": [
-      {"role": "system", "content": "You are a helpful assistant."},
-      {"role": "user", "content": "Hello!"}
-    ]
-  }'`,
-    },
-    {
       lang: 'TypeScript',
       code: `import OpenAI from "openai";
 
@@ -118,6 +105,19 @@ const completion = await client.chat.completions.create({
 });
 
 console.log(completion.choices[0].message.content);`,
+    },
+    {
+      lang: 'cURL',
+      code: `curl https://api.inference.crusoecloud.com/v1/chat/completions \\
+  -H "Authorization: Bearer $CRUSOE_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
+    "messages": [
+      {"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "Hello!"}
+    ]
+  }'`,
     },
   ],
 }
@@ -143,17 +143,16 @@ export const PAGES = {
     surface: 'Serverless Inference', layout: 'cards',
     pageTitle: 'Serverless Inference',
     title: 'Run your first model',
-    desc: 'Call leading open models over an OpenAI-compatible API, no GPUs to manage, billed per token and accelerated by MemoryAlloy.',
+    desc: 'Call leading open models over an OpenAI-compatible API, no GPUs to manage, billed per-token and accelerated by MemoryAlloy.',
     primary: { label: 'Open playground' },
     docs: DOCS,
+    stepsBanner: { title: 'Get started with serverless inference', sub: 'Generate a key, make your first call, test in the Foundry.' },
     fullSteps: [
       { title: 'Create an API key', desc: 'Your key is shown only once, save it somewhere safe.',
         action: { type: 'button', label: 'Get API key', variant: 'outline', icon: 'key' } },
       { title: 'Choose a model', desc: 'Select a model and the code example updates automatically.',
-        action: { type: 'model', brand: 'Meta', name: 'Llama 3.3 70B Instruct', meta: 'LLM · 131k context',
-          price: '$0.25 Input · $0.13 Cached · $0.75 Output',
-          note: 'Try the selected model in the Playground, or explore all available models including NVIDIA Nemotron, Gemma, GPT-OSS and more.',
-          buttons: [{ label: 'Try Model', variant: 'outline' }, { label: 'Explore Model Catalog', variant: 'outline' }] } },
+        action: { type: 'select', placeholder: 'Select a model',
+          buttons: [{ label: 'Try model', variant: 'outline' }, { label: 'Explore model catalog →', variant: 'outline' }] } },
       { title: 'Make your first inference call', desc: 'OpenAI-compatible, swap the base URL, add your key, done.',
         action: { type: 'code', ...LLAMA_CODE } },
     ],
@@ -163,7 +162,7 @@ export const PAGES = {
     surface: 'Self-Serve Deployments', layout: 'cards',
     pageTitle: 'Self-Serve Deployments',
     title: 'Deploy an on-demand endpoint',
-    desc: 'Spin up on-demand endpoints in minutes. Pay only while they run and scale to zero when idle.',
+    desc: 'Spin up on-demand endpoints in minutes, pay only while they run, scale to zero when idle and tear them down when you’re done.',
     primary: { label: 'Create Deployment' },
     docs: DOCS,
     models: { title: 'Popular models to self-serve deploy', viewAll: true, action: 'Deploy', items: CATALOG.slice(0, 3) },
@@ -212,7 +211,7 @@ export const PAGES = {
   usage: {
     surface: 'Usage', layout: 'centered', icon: 'usage',
     title: 'Usage',
-    desc: 'Token volume, request counts, and spend appear here in real time, broken down by model and API key, once you make your first request.',
+    desc: 'Token volume, request counts, and spend appear here in real time, broken down by model and API key, after you make your first request.',
     primary: { label: 'Open playground' }, docs: DOCS,
   },
 
@@ -233,7 +232,7 @@ export const PAGES = {
   'api-keys': {
     surface: 'API Keys', layout: 'centered', icon: 'key',
     title: 'API Keys',
-    desc: 'Generate a bearer token to authenticate requests against api.inference.crusoecloud.com. Keys are shown only once at creation.',
+    desc: 'Generate a bearer token to authenticate requests against api.inference.crusoecloud.com. Keys are shown one time at creation.',
     primary: { label: 'Create API key' }, docs: DOCS,
   },
 }

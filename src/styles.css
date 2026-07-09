@@ -498,8 +498,9 @@ body {
 .gs-hero-sub { font-size: 13px; color: var(--muted); margin-top: 3px; line-height: 145%; }
 
 .gs-steps { background: var(--panel); border-radius: 14px; overflow: hidden; }
-/* Push the below-hero section down ~10% on Serverless only */
-.page-serverless .gs-steps { margin-top: 80px; }
+/* Serverless: banner sits below the hero, steps directly under the banner */
+.page-serverless .gs-hero { margin-top: 80px; }
+.page-serverless .gs-steps { margin-top: 0; }
 .gs-step { display: flex; gap: 16px; padding: 24px 26px; }
 .gs-step + .gs-step { border-top: 1px solid var(--border); }
 .gs-step-num {
@@ -515,6 +516,15 @@ body {
 .gs-step-action { margin-top: 14px; }
 .gs-btn-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .gs-note { font-size: 12.5px; color: var(--muted); line-height: 150%; margin: 12px 0; }
+
+/* Model select dropdown (placeholder state) */
+.gs-select {
+  display: flex; align-items: center; justify-content: space-between;
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 12px 14px; background: var(--bg); cursor: pointer; margin-bottom: 14px;
+}
+.gs-select:hover { border-color: var(--border-strong); }
+.gs-select-placeholder { font-size: 14px; color: var(--muted); }
 
 /* Model selector row */
 .gs-model {
