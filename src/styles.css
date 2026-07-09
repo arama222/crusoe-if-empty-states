@@ -205,7 +205,7 @@ body {
 
 /* ── Content scroll region ── */
 .content { flex: 1; overflow-y: auto; }
-.content-inner { max-width: 1000px; margin: 0 auto; padding: 120px 40px 28px; }
+.content-inner { max-width: 1140px; margin: 0 auto; padding: 120px 40px 28px; }
 
 .page-head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px; }
 .ph-title {
@@ -249,9 +249,20 @@ body {
 @keyframes illus-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
 @keyframes illus-pulse { 0%,100% { opacity: 0.35; } 50% { opacity: 1; } }
 @keyframes illus-dash { to { stroke-dashoffset: -12; } }
+@keyframes illus-shimmer { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+@keyframes illus-breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.03); } }
 .illus-float { animation: illus-float 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 .illus-pulse { animation: illus-pulse 2.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 .illus-dash { stroke-dasharray: 3 3; animation: illus-dash 1.6s linear infinite; }
+.illus-shimmer { animation: illus-shimmer 3.8s ease-in-out infinite; }
+@keyframes illus-rotate { to { transform: rotate(360deg); } }
+.illus-rotate { animation: illus-rotate 36s linear infinite; transform-box: fill-box; transform-origin: center; }
+/* Flowy fade: a slower, softer shimmer used by the Inference contours and
+   Develop polygons. Negative per-path delays keep the wave in phase from the
+   first frame, so nothing jumps on load. */
+@keyframes illus-flow { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+.illus-flow { animation: illus-flow 5s ease-in-out infinite; }
+.illus-breathe { animation: illus-breathe 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 
 .etxt { display: flex; flex-direction: column; gap: 8px; }
 .ecat {
@@ -411,7 +422,7 @@ body {
 
 .hero {
   display: flex; flex-direction: column; align-items: center; text-align: center;
-  max-width: 880px; margin: 0 auto; padding: 24px 20px;
+  max-width: 1140px; margin: 0 auto; padding: 24px 20px;
 }
 .hero-badge {
   position: relative;
@@ -430,7 +441,7 @@ body {
   color: var(--text); letter-spacing: -0.02em; line-height: 116%; margin-bottom: 16px;
   text-wrap: balance;
 }
-.hero-desc { font-size: 15px; color: var(--muted); line-height: 165%; max-width: 840px; margin-bottom: 28px; }
+.hero-desc { font-size: 15px; color: var(--muted); line-height: 165%; max-width: 1080px; margin-bottom: 28px; }
 
 /* Inline "View docs" link at the end of the description */
 .doc-link {

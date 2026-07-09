@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Routes, Route, Navigate, NavLink, useParams, useLocation } from 'react-router-dom'
 import { NAV, NAV_TOP, NAV_BOTTOM, PROJECTS, PAGES } from './data.js'
-import { CubeIllus } from './illustrations.jsx'
+import { ILLUS_BY_SCREEN, InferenceIllus } from './illustrations.jsx'
 import { LOGOS } from './logos.jsx'
 import {
   IconChevron, IconChevronRight, IconChevronUpDown, IconBell, IconUpload, IconPlus,
@@ -257,11 +257,12 @@ function GraphIllus() {
 
 /* ---------- WITH cards: left-hero layout (illustration left, text right, cards below) ---------- */
 function LeftHeroPage({ page, screen }) {
+  const Illus = ILLUS_BY_SCREEN[screen] || InferenceIllus
   return (
     <div className={'content page-' + screen}>
       <div className="content-inner wide">
         <div className="cloud-hero">
-          <div className="cloud-illus"><CubeIllus /></div>
+          <div className="cloud-illus"><Illus /></div>
           <div className="cloud-hero-txt">
             <h2 className="cloud-title">{page.title}</h2>
             <Desc desc={page.desc} className="cloud-desc" docs={page.docs} />
@@ -333,12 +334,13 @@ function LeftHeroPage({ page, screen }) {
 }
 
 /* ---------- NO cards: simple centered state (illustration + headline + description + CTA) ---------- */
-function CenteredPage({ page }) {
+function CenteredPage({ page, screen }) {
+  const Illus = ILLUS_BY_SCREEN[screen] || InferenceIllus
   return (
     <div className="content">
       <div className="content-inner">
         <div className="hero">
-          <div className="hero-illus"><CubeIllus /></div>
+          <div className="hero-illus"><Illus /></div>
           <h1 className="hero-title">{page.title}</h1>
           <Desc desc={page.desc} docs={page.docs} />
           <div className="hero-actions">
@@ -354,7 +356,7 @@ function EmptyState() {
   const { screen } = useParams()
   const page = PAGES[screen]
   if (!page) return <Navigate to="/app/serverless" replace />
-  return page.layout === 'cards' ? <LeftHeroPage page={page} screen={screen} /> : <CenteredPage page={page} />
+  return page.layout === 'cards' ? <LeftHeroPage page={page} screen={screen} /> : <CenteredPage page={page} screen={screen} />
 }
 
 export default function App() {
