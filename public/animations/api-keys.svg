@@ -1,0 +1,45 @@
+<svg viewBox="-30 -30 217 217" width="434" height="434" fill="none" stroke="#ececea" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg">
+  <!-- IF Manage empty-state illustration: orbiting starburst around a fixed dashed core (API Keys) -->
+  <style>
+    @keyframes illus-dash { to { stroke-dashoffset: -12; } }
+    @keyframes illus-rotate { to { transform: rotate(360deg); } }
+    .illus-dash { stroke-dasharray: 3 3; animation: illus-dash 1.6s linear infinite; }
+    .illus-rotate { animation: illus-rotate 36s linear infinite; transform-origin: 78.328px 78.3125px; }
+  </style>
+  <rect x="-30" y="-30" width="217" height="217" rx="14" fill="#0a0b0c" stroke="none"/>
+  <g class="illus-rotate">
+    <path d="M79.8623 74.2034L104.021 10.0347"/>
+    <circle cx="104.576" cy="8.5576" r="3.3196" fill="#0a0b0c"/>
+    <path d="M82.334 76.514L144.879 48.4219"/>
+    <circle cx="146.312" cy="47.7784" r="3.3196" fill="#0a0b0c"/>
+    <path d="M78.5176 82.7289L81.7055 151.226"/>
+    <circle cx="81.7786" cy="152.806" r="3.3196" fill="#0a0b0c"/>
+    <path d="M76.8052 82.4803L53.4365 146.942"/>
+    <circle cx="52.9104" cy="148.419" r="3.3196" fill="#0a0b0c"/>
+    <path d="M75.3298 81.5737L29.002 132.113"/>
+    <circle cx="27.9338" cy="133.283" r="3.3196" fill="#0a0b0c"/>
+    <path d="M74.3059 80.1844L12.126 109.052"/>
+    <circle cx="10.6926" cy="109.71" r="3.3196" fill="#0a0b0c"/>
+    <path d="M73.9114 78.5028L5.39941 81.2667"/>
+    <circle cx="3.8196" cy="81.3251" r="3.3196" fill="#0a0b0c"/>
+    <path d="M74.1734 76.8065L9.8584 53.043"/>
+    <circle cx="8.3821" cy="52.4872" r="3.3196" fill="#0a0b0c"/>
+    <path d="M75.081 75.3294L24.834 28.6799"/>
+    <circle cx="23.679" cy="27.6123" r="3.3196" fill="#0a0b0c"/>
+    <path d="M76.484 74.3204L47.9971 11.9504"/>
+    <circle cx="47.3391" cy="10.5172" r="3.3196" fill="#0a0b0c"/>
+    <path d="M78.1669 73.9254L75.8271 5.39886"/>
+    <circle cx="75.7688" cy="3.8196" r="3.3196" fill="#0a0b0c"/>
+    <path d="M81.3389 75.11L128.281 25.1409"/>
+    <circle cx="129.363" cy="24.0002" r="3.3196" fill="#0a0b0c"/>
+    <path d="M82.7148 78.2102L151.256 76.2799"/>
+    <circle cx="152.836" cy="76.2361" r="3.3196" fill="#0a0b0c"/>
+    <path d="M82.4219 79.9066L146.444 104.46"/>
+    <circle cx="147.922" cy="105.03" r="3.3196" fill="#0a0b0c"/>
+    <path d="M81.5 81.369L131.177 128.633"/>
+    <circle cx="132.317" cy="129.715" r="3.3196" fill="#0a0b0c"/>
+    <path d="M80.0967 82.3634L107.809 145.07"/>
+    <circle cx="108.438" cy="146.517" r="3.3196" fill="#0a0b0c"/>
+  </g>
+  <path class="illus-dash" d="M93.4539 63.1858H63.2002V93.4395H93.4539V63.1858Z" fill="#0a0b0c"/>
+</svg>

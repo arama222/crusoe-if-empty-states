@@ -1,0 +1,15 @@
+<svg viewBox="-28 -28 216 208" width="432" height="416" fill="none" stroke="#ececea" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg">
+  <!-- IF Develop empty-state illustration: polygon fade + marching core (Fine-Tuning, Evaluations, Datasets) -->
+  <style>
+    @keyframes illus-flow { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+    @keyframes illus-dash { to { stroke-dashoffset: -12; } }
+    .illus-flow { animation: illus-flow 5s ease-in-out infinite; }
+    .illus-dash { stroke-dasharray: 3 3; animation: illus-dash 1.6s linear infinite; }
+  </style>
+  <rect x="-28" y="-28" width="216" height="208" rx="14" fill="#0a0b0c" stroke="none"/>
+  <path class="illus-dash" d="M79.8253 92.2583L45.1411 150.551H114.509L79.8253 92.2583Z"/>
+  <path class="illus-flow" style="animation-delay:-2.4s" d="M114.69 33.3659H44.9609L10.0962 91.9589L44.9609 150.552H114.69L149.555 91.9589L114.69 33.3659Z"/>
+  <path class="illus-flow" style="animation-delay:-3.6s" d="M79.8253 0.55188L16.2433 30.2614L0.543457 97.0222L44.5392 150.551H115.103L159.099 97.0222L143.399 30.2614L79.8253 0.55188Z"/>
+  <path class="illus-flow" d="M114.423 83.4066H45.2271V150.551H114.423V83.4066Z"/>
+  <path class="illus-flow" style="animation-delay:-1.2s" d="M79.825 47.1048L23.7749 86.6173L45.1838 150.55H114.458L135.867 86.6173L79.825 47.1048Z"/>
+</svg>

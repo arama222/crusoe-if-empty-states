@@ -1,0 +1,27 @@
+<svg viewBox="-34 -28 217 206" width="434" height="412" fill="none" stroke="#ececea" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg">
+  <!-- IF Monitor empty-state illustration: marching rays + pulsing dots (Deployments, Usage, Billing, Metrics) -->
+  <style>
+    @keyframes illus-pulse { 0%,100% { opacity: 0.35; } 50% { opacity: 1; } }
+    @keyframes illus-dash { to { stroke-dashoffset: -12; } }
+    .illus-pulse { animation: illus-pulse 2.2s ease-in-out infinite; }
+    .illus-dash { stroke-dasharray: 3 3; animation: illus-dash 1.6s linear infinite; }
+  </style>
+  <rect x="-34" y="-28" width="217" height="206" rx="14" fill="#0a0b0c" stroke="none"/>
+  <path d="M122.963 0.495117H24.4312V23.3886H122.963V0.495117Z"/>
+  <path d="M73.6968 23.3756V146.847"/>
+  <path class="illus-dash" d="M72.7851 24.3138L3.20557 146.847"/>
+  <path d="M73.2803 23.8186L3.20557 104.812"/>
+  <path class="illus-dash" d="M73.2803 24.0532L3.20557 64.1982"/>
+  <path class="illus-dash" d="M75.2607 24.3138L144.84 146.847"/>
+  <path d="M74.7656 23.8186L144.84 104.812"/>
+  <path class="illus-dash" d="M74.7656 24.0532L144.84 64.1982"/>
+  <circle class="illus-pulse" cx="3.45" cy="146.55" r="2.96" fill="#ececea"/>
+  <circle class="illus-pulse" style="animation-delay:1.1s" cx="73.7" cy="146.55" r="2.96" fill="#ececea"/>
+  <circle cx="3.45" cy="103.56" r="2.96" fill="#0a0b0c"/>
+  <circle cx="3.45" cy="63.55" r="2.96" fill="#0a0b0c"/>
+  <circle cx="73.53" cy="103.56" r="2.96" fill="#0a0b0c"/>
+  <circle cx="73.53" cy="63.55" r="2.96" fill="#0a0b0c"/>
+  <circle class="illus-pulse" style="animation-delay:0.55s" cx="144.59" cy="146.55" r="2.96" fill="#ececea"/>
+  <circle cx="144.59" cy="103.56" r="2.96" fill="#0a0b0c"/>
+  <circle cx="144.59" cy="63.55" r="2.96" fill="#0a0b0c"/>
+</svg>
