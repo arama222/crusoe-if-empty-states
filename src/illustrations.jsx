@@ -108,17 +108,22 @@ export function ManageIllus() {
   )
 }
 
-// One illustration per nav group.
+// For now every page uses the Inference illustration; the per-group mapping
+// is kept below for when we switch back.
 export const ILLUS_BY_SCREEN = {
   serverless: InferenceIllus,
   'self-serve': InferenceIllus,
   tailored: InferenceIllus,
-  'fine-tuning': DevelopIllus,
-  evaluations: DevelopIllus,
-  datasets: DevelopIllus,
-  deployments: MonitorIllus,
-  usage: MonitorIllus,
-  billing: MonitorIllus,
-  metrics: MonitorIllus,
-  'api-keys': ManageIllus,
+  'fine-tuning': InferenceIllus,
+  evaluations: InferenceIllus,
+  datasets: InferenceIllus,
+  deployments: InferenceIllus,
+  usage: InferenceIllus,
+  billing: InferenceIllus,
+  metrics: InferenceIllus,
+  'api-keys': InferenceIllus,
 }
+
+// Per-group mapping (currently unused):
+// Inference → InferenceIllus, Develop → DevelopIllus,
+// Monitor → MonitorIllus, Manage/API Keys → ManageIllus
